@@ -13,6 +13,10 @@ const pool = mysql.createPool({
   queueLimit: 0
 });
 
+pool.on('error', (err) => {
+  console.error('MySQL Pool Error:', err);
+});
+
 export async function getConnection() {
   try {
     const connection = await pool.getConnection();
