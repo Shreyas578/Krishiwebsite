@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "web/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/server.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/web/dist/$1"
+    },
+    {
+      "source": "/(.*)\\.(.*)",
+      "destination": "/web/dist/$1.$2"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/web/dist/index.html"
+    }
+  ]
+}

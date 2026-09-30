@@ -1,0 +1,95 @@
+# =========================
+# Monorepo Global Ignores
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+pnpm-debug.log*
+*.log
+temp/
+tmp/
+.vercel/
+
+# =========================
+# Environment Variables (CRITICAL)
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+credentials.json
+client_secret.json
+
+# =========================
+# React / Vite Frontend (/web)
+# =========================
+web/node_modules/
+web/dist/
+web/build/
+web/.eslintcache
+web/dist-ssr/
+web/*.local
+
+# =========================
+# Node.js / Express Backend (/backend)
+# =========================
+backend/node_modules/
+backend/dist/
+backend/build/
+backend/coverage/
+backend/pids
+backend/*.pid
+backend/*.seed
+backend/*.pid.lock
+backend/artifacts/
+backend/cache/
+backend/uploads/
+backend/temp_receipt_*.html
+
+# =========================
+# Python / Machine Learning
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+.jupyter/
+.ipynb_checkpoints/
+ml/outputs/
+ml/models/
+ml/data/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# OS & Editor Files
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+*.bak

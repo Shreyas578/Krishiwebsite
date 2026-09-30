@@ -1,0 +1,44 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^6.4.1",
+    "@pinata/sdk": "^2.1.0",
+    "axios": "^1.18.1",
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.10.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "express-validator": "^7.3.2",
+    "firebase-admin": "^14.1.0",
+    "groq-sdk": "^1.3.0",
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.11.0",
+    "multer": "^2.2.0",
+    "mysql2": "^3.22.6",
+    "node-cache": "^5.1.2",
+    "node-cron": "^4.6.0",
+    "nodemailer": "^6.9.10",
+    "twilio": "^4.10.0",
+    "uuid": "^14.0.1",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.14",
+    "ethers": "^6.17.0",
+    "hardhat": "^3.9.1"
+  },
+  "type": "module"
+}

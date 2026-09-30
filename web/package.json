@@ -1,0 +1,23 @@
+{
+  "name": "kisan-ai-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.4.0",
+    "@vitejs/plugin-react": "latest",
+    "ethers": "^6.17.0",
+    "leaflet": "^1.9.4",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-leaflet": "^5.0.0",
+    "react-router-dom": "latest",
+    "recharts": "^3.10.1",
+    "vite": "latest"
+  }
+}
