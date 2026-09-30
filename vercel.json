@@ -20,15 +20,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/web/dist/$1"
-    },
-    {
-      "source": "/(.*)\\.(.*)",
-      "destination": "/web/dist/$1.$2"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/web/dist/index.html"
+      "destination": "/index.html"
     }
   ]
 }
