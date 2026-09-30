@@ -23,10 +23,14 @@ class IPFSUploadService {
     this.ipfsGateway = process.env.IPFS_GATEWAY || 'https://gateway.pinata.cloud';
     this.isConfigured = !!this.pinataApiKey && !!this.pinataSecretKey;
     this.uploadedHashes = new Map(); // Cache for uploaded file hashes
-    this.localStoragePath = './uploads/ipfs';
+    this.localStoragePath = process.env.VERCEL ? '/tmp/uploads/ipfs' : './uploads/ipfs';
 
-    if (!fs.existsSync(this.localStoragePath)) {
-      fs.mkdirSync(this.localStoragePath, { recursive: true });
+    try {
+      if (!fs.existsSync(this.localStoragePath)) {
+        fs.mkdirSync(this.localStoragePath, { recursive: true });
+      }
+    } catch (err) {
+      console.warn('[IPFS] Warning: Could not create local storage directory (read-only filesystem). Local fallback may not work.');
     }
   }
 
