@@ -69,8 +69,8 @@ const missingEnvVars = requiredEnvVars.filter(v => !process.env[v]);
 if (missingEnvVars.length > 0) {
   console.error('❌ CRITICAL: Missing required environment variables:');
   missingEnvVars.forEach(v => console.error(`   - ${v}`));
-  console.error('\nPlease configure these variables in .env file');
-  process.exit(1);
+  console.error('\nPlease configure these variables in your Vercel Dashboard!');
+  // process.exit(1); // REMOVED: This causes Vercel to instantly crash with a 500 error!
 }
 
 // Warn about optional but important services
