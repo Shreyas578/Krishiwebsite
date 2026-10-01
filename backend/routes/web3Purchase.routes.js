@@ -85,7 +85,8 @@ router.post('/', async (req, res) => {
     
     const fs = await import('fs/promises');
     const path = await import('path');
-    const tempPath = path.join(process.cwd(), `temp_receipt_${Date.now()}.html`);
+    const os = await import('os');
+    const tempPath = path.join(os.tmpdir(), `temp_receipt_${Date.now()}.html`);
     await fs.writeFile(tempPath, receiptHtml);
     
     const { createReadStream } = await import('fs');
